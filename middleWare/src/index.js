@@ -3,14 +3,14 @@ const app = express();
 const bodyParser = require("body-parser");
 const { default: mongoose } = require("mongoose");
 const router = require("./router/router");
-// const movement = require('movement');
+const moment = require('moment');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(function (req,res, next){
-    const date=Date.now();
+    const date=moment().format('DD/MM/YYYY HH:MM:SS');
     const ip=req.ip;
-    const url=req.url;
+    const url=req.originalUrl;
     console.log(date,ip,url);
     next();
 });
