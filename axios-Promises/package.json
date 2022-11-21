@@ -1,0 +1,19 @@
+{
+  "name": "axios-promises",
+  "version": "1.0.0",
+  "description": "- Pending : not awaited and hence has not completed yet ( e.g. typically when you dont await an axios or db call) - Rejected: When promise failed ( wrong url | server down etc) - Fulfilled: Promise completed succesfully (e.g. db call has completed and returned a result succesfully) // - settled : referes to a combination of either rejhected or fulfilled",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.1.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "promis": "^1.1.4",
+    "promise": "^8.3.0"
+  }
+}
