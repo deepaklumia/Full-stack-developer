@@ -75,7 +75,7 @@ button{
 
 <body>
     <div class="container">
-        <form action="/signup" method="post" id="data">
+        <form  id="data">
             <input type="text" name="FirstName" placeholder="First Name"><br />
             <input type="text" name="LastName" placeholder="Last Name"><br />
             <input type="text" name="Mobile" placeholder="Mobile Number"><br />
@@ -85,6 +85,24 @@ button{
 
         </form>
     </div>
+    <script>
+      let data = document.querySelector("#data");
+      console.log(Array.from(data));
+      Array.from(data)[5].addEventListener("click",async ()=>{
+            for(let i=0; i<Array.from(data).length-1; i++){
+              if(Array.from(data)[i].value === ""){
+                alert(`please enter your ${Array.from(data)[i].placeholder}`)
+                break;
+              }else{
+               alert("successfully Registered")
+                data.setAttribute("action","/signup");
+                data.setAttribute("method","post");
+                break;
+              }
+            }
+      })
+      
+    </script>
     
 </body>
 

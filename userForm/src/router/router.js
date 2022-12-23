@@ -6,7 +6,6 @@ const validator = require('validator');
 const userModule = require('../module/userModule');
 
 router.get('/', function(req, res){
-      console.log(req);
     res.sendFile(__dirname + '/facebook/login.html');
 });
 router.get('/signupfb', function(req, res){
@@ -16,18 +15,16 @@ router.get('/signupfb', function(req, res){
 
 router.post('/signup',async function(req, res){
      let userdata = req.body;
-     console.log(userdata);
      if(!userdata){
       res.send("enter your email address");
      }
      let data = await userModule.create(userdata);
      console.log(data);
-     res.send('registration successful');
+     res.redirect('/');
 });
 
 router.get('/login',async function(req, res){
       let loginData = req.query;
-      console.log(loginData);
       let data = await userModule.find(loginData);
       console.log(data);
       if(loginData.Email=="" || loginData.password==""){
