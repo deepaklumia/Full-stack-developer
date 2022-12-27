@@ -1,0 +1,17 @@
+p{
+    color: aqua;
+}
+.box{
+    text-align: center;
+    background-color: black;
+    margin: 100px 300px 300px 300px;
+    padding-bottom: 20px;
+}
+input{
+    margin-top: 30px;
+}
+.caontiner{
+    background-color: blueviolet;
+    margin: 100px 200px 200px 200px;
+    padding: 20px 0px 20px 0px;
+}
